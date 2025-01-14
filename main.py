@@ -1,6 +1,7 @@
 from web3 import Web3
 import boto3
 import pandas as pd
+from requests import get
 import io
 import os
 
@@ -39,5 +40,9 @@ s3_client.put_object(
     Bucket="llatournerie",
     Key="exp-remote/data.csv"
 )
+
+
+ip = get('https://api.ipify.org').content.decode('utf8')
+print('My public IP address is: {}'.format(ip))
 
 print("Success")
