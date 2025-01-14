@@ -16,7 +16,7 @@ w3 = Web3(Web3.HTTPProvider(IP_ADDRESS))
 
 print("Is connected: ", w3.is_connected())
 
-block_number = w3.eth.block_number()
+block_number = w3.eth.get_block_number()
 
 df = pd.DataFrame({
     "col1": [block_number]
