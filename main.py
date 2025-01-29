@@ -5,6 +5,7 @@ from requests import get
 import io
 import os
 
+print("Hello World !")
 print("Starting job...")
 
 ACCESS_KEY = os.environ["ACCESS_KEY"]
